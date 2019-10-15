@@ -19,5 +19,20 @@
 		<h2><a href="">My Second Post</a></h2>
 		<p>Hi Guys, this is my second blog post.</p>
 	</div>
+	<div>
+		{% for post in posts %}
+	<div>
+		{{ post }}
+	</div>
+		{% endfor %}
+	</div>
+
+	{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
